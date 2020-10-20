@@ -1,0 +1,74 @@
+:root {
+    position: relative;
+    background: #912Ab6;
+}
+
+main{
+    position:absolute;
+    width: 550px;
+    height: 500px;
+    left: 35%;
+    top: 5.5rem;
+    bottom: 2.5rem;
+
+    background: #FFFFFF;
+    border-radius: 62px;
+}
+
+main h1{
+    position: relative;
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #912Ab6;
+}
+
+form{
+    position: absolute;
+    text-align: center;
+    display: block;
+    margin-top: 2.5rem;
+
+}
+form input {
+    
+    width: 75%;
+    height: 35px;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    
+
+    border: 2px solid #912AB6;
+    border-radius: 15px;
+}
+
+button {
+    text-align: center;
+    width: 263px;
+    height: 44px;
+    align-items: center;
+    
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    
+
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    background: #912AB6;
+    border-radius: 15px;
+}
+
+#name::-webkit-input-placeholder, #senha::-webkit-input-placeholder{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: #A8A0A8;
+}
