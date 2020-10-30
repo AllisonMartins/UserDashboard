@@ -46,7 +46,8 @@ form input {
 }
 
 
-#nome::-webkit-input-placeholder,#email::-webkit-input-placeholder, #senha::-webkit-input-placeholder{
+#nome::-webkit-input-placeholder,#email::-webkit-input-placeholder, #senha::-webkit-input-placeholder,
+#bio::-webkit-input-placeholder{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;

@@ -10,11 +10,50 @@
 <body>
     <main>
         <h1>Login</h1>
-        <form action="">
-            <input type="text" name="name" id="name" placeholder="nome de usuário">
-            <input type="password" name="senha" id="senha" placeholder="senha">
+        <form id="login-form">
+            <input type="email" name="email" id="login-email" placeholder="email">
+            <input type="password" name="senha" id="login-senha" placeholder="senha">
             <button type="submit">Entrar</button>
+            <br>
+            <a href="../../index.html">não possui conta? cadastre-se</a>
         </form>
+        
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyANgyYY1vvxGAwzUG3wlTf3N4EgIkgKTmU",
+        authDomain: "user-dashboard-15c1e.firebaseapp.com",
+        databaseURL: "https://user-dashboard-15c1e.firebaseio.com",
+        projectId: "user-dashboard-15c1e",
+        storageBucket: "user-dashboard-15c1e.appspot.com",
+        messagingSenderId: "130133128343",
+        appId: "1:130133128343:web:4a9881d697f7c69282a5d2",
+        measurementId: "G-TSHY6KEG7H"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+    
+        
+    
+    </script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="../../scripts/index.js"></script>
+      <script src="auth.js"></script>
 </body>
 </html>

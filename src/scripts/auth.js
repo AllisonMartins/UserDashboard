@@ -10,10 +10,16 @@ signupForm.addEventListener('submit', (e) => {
     // sign up the user
 
     auth.createUserWithEmailAndPassword(email,password).then(cred => {
-        console.log(cred.user);
-        window.location.href= "./pages/Login/index.html";
+
+        return db.collection('users').doc(cred.user.uid).set({
+            bio: signupForm['bio'].value,
+        })
+        
+    }).then(() => {
+        window.location.href= "./pages/Home/index.html";
         signupForm.reset();
     });
 
 
-})
+});
+

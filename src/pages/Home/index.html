@@ -3,20 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 </head>
 <body>
-    <nav>
+    <!-- NAVBAR -->
+    <nav class="z-depth-0 purple accent-4">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="logged-out" style ="display: none;">
+                <a href="../Login/index.html">Login</a>
+              </li>
+              <li class="logged-out" style ="display: none;">
+                <a href="../../index.html">Criar conta</a>
+              </li>
+            <li class="logged-in" style ="display: none;">
+                <a href="#" class="modal-trigger"data-target="modal-create">Criar post</a>
+              </li>
+              <li class="logged-in" style ="display: none;">
+                <a href="#" class="modal-trigger" data-target="modal-account">Conta</a>
+              </li>
+            <li class="logged-in" style ="display: none;">  
+                <a href="#"  id="logout-id">Sair</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
 
-    </nav>
-    <main>
+      <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+      <div class="account-extras"></div>
+    </div>
+  </div>
+      <!-- CREATE GUIDE MODAL -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Guide</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Guide Title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
+          <label for="content">Guide Content</label>
+        </div>
+        <button class="btn purple accent-4 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
+    <!-- GUIDE LIST -->
+  <div class="container" style="margin-top: 40px;">
+    <ul class="collapsible z-depth-0 guides" style="border: none;">
+      
+    </ul>
+  </div>
 
-    </main>
-    <footer>
-        
-    </footer>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyANgyYY1vvxGAwzUG3wlTf3N4EgIkgKTmU",
+    authDomain: "user-dashboard-15c1e.firebaseapp.com",
+    databaseURL: "https://user-dashboard-15c1e.firebaseio.com",
+    projectId: "user-dashboard-15c1e",
+    storageBucket: "user-dashboard-15c1e.appspot.com",
+    messagingSenderId: "130133128343",
+    appId: "1:130133128343:web:4a9881d697f7c69282a5d2",
+    measurementId: "G-TSHY6KEG7H"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+    
+
+</script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../../scripts/index.js"></script>
+  <script src="auth.js"></script>
 </body>
 </html>
